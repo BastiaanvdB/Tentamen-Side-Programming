@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "7ef05269-652d-4598-87ba-bd02eafe1203",
+		"name": "Serverside Tentamen Bastiaan van der Bijl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21099616"
+	},
+	"item": [
+		{
+			"name": "WeatherImageGenerator",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"OrderId\": 4,\r\n    \"OrderName\": \"bas\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://inh-1616-stbvdb-d-azwe-fa-1.azurewebsites.net/api/WeatherImageGenerator?code=<PLAATS CODE HIER>",
+					"protocol": "https",
+					"host": [
+						"inh-1616-stbvdb-d-azwe-fa-1",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"WeatherImageGenerator"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "<PLAATS CODE HIER>",
+							"description": "Hier plaats je de auth code voor authenticatie "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WeatherImageRetriever",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://inh-1616-stbvdb-d-azwe-fa-1.azurewebsites.net/api/WeatherImageRetriever/<PLAATS HIER JOB ID>",
+					"protocol": "https",
+					"host": [
+						"inh-1616-stbvdb-d-azwe-fa-1",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"WeatherImageRetriever",
+						"<PLAATS HIER JOB ID>"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "jobid",
+			"value": "id"
+		}
+	]
+}
